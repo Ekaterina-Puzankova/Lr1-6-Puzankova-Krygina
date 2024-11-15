@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пользователи бота</title>
+</head>
+<body>
+    <h1>Пользователи бота</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>chat_id</th>
+                <th>username</th>
+                <th>data</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td>{{ user['chat_id'] }}</td>
+                    <td>{{ user['username'] }}</td>
+                    <td>{{ user['data'] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
