@@ -36,25 +36,25 @@ else:
 
 cursor = cnx.cursor()
 
-# Bot setup
-TOKEN = '7714638685:AAEKNyXvkTz2l_ZaKR0Tg7bY-1kp6o-HwPA'  # Replace with your bot token
+
+TOKEN = '7714638685:AAEKNyXvkTz2l_ZaKR0Tg7bY-1kp6o-HwPA'  
 bot = telebot.TeleBot(TOKEN)
 
-# Create SQLTable instance for users table
+
 users_table = SQLTable(db_config, 'users')  
 facts_table = SQLTable(db_config, 'facts') 
 
 
 user_data = {} 
 
-# Logging function
+
 def log_message(chat_id, message):
     date = datetime.now().strftime("%Y-%m-%d")
     filename = f"chat_{chat_id}_{date}.txt"
     with open(filename, "a", encoding="utf-8") as f:
         f.write(f"{datetime.now().strftime('%H:%M:%S')} - {message}\n")
 
-# Send message function
+
 def send_message(chat_id, text):
     bot.send_message(chat_id, text)
 
