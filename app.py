@@ -18,7 +18,7 @@ pd.set_option('display.width', None)
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '234569876'
 
-# Database configuration (MySQL)
+# База данных
 db_config = {
     'user': 'Ekaterina Puzankova',
     'password': 'EkaterinaPuzankova!!!',
